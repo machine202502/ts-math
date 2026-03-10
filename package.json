@@ -1,0 +1,25 @@
+{
+  "name": "ts-overkill",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\"}\" main.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/machine202502/ts-math.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/machine202502/ts-math/issues"
+  },
+  "homepage": "https://github.com/machine202502/ts-math#readme",
+  "description": "",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "tsc": "^2.0.4"
+  }
+}
