@@ -1,8 +1,8 @@
 {
   "name": "@machine202502/types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Type-level integer math and number utilities for TypeScript",
-  "license": "ISC",
+  "license": "Unlicense",
   "sideEffects": false,
   "types": "./dist/math/index.d.ts",
   "exports": {
@@ -27,6 +27,7 @@
   },
   "files": [
     "dist",
+    "LICENSE",
     "README.md"
   ],
   "scripts": {
