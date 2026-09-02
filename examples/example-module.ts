@@ -1,4 +1,4 @@
-import {
+import type {
   NumberIntegerAdd,
   NumberIntegerSubtract,
   NumberIntegerMultiply,
@@ -22,14 +22,16 @@ import {
   IsInteger,
   Trunc as TypeTrunc,
   Sign,
+  Signed,
+} from "@machine202502/types/math";
+import type {
   ToBoolean,
   Not,
   And,
   Or,
   If,
-  Signed,
   NumericalSign,
-} from "./ts-overkill";
+} from "@machine202502/types/math/internal";
 
 export function Trunc<N extends number>(n: N): TypeTrunc<N> {
   const result = n < 0 ? Math.ceil(n) : Math.floor(n);

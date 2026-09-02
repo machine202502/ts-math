@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "paths": {
+      "@machine202502/types/math": ["./src/math/index.ts"],
+      "@machine202502/types/math/internal": ["./src/math/internal.ts"]
+    },
+    "baseUrl": "."
+  },
+  "include": ["src/**/*", "examples/**/*"]
+}

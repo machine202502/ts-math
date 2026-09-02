@@ -1,25 +1,62 @@
 {
-  "name": "ts-overkill",
+  "name": "@machine202502/types",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Type-level integer math and number utilities for TypeScript",
+  "license": "ISC",
+  "sideEffects": false,
+  "types": "./dist/math/index.d.ts",
+  "exports": {
+    "./math": {
+      "types": "./dist/math/index.d.ts",
+      "default": "./dist/math/index.d.ts"
+    },
+    "./math/internal": {
+      "types": "./dist/math/internal.d.ts",
+      "default": "./dist/math/internal.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "math": [
+        "./dist/math/index.d.ts"
+      ],
+      "math/internal": [
+        "./dist/math/internal.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
-    "start": "ts-node --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\"}\" main.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "prepublishOnly": "npm run clean && npm run build",
+    "example": "ts-node --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\"}\" examples/example.ts"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/machine202502/ts-math.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "typescript",
+    "types",
+    "type-level",
+    "math",
+    "integer",
+    "arithmetic"
+  ],
+  "author": "machine202502",
+  "publishConfig": {
+    "access": "public"
+  },
   "bugs": {
     "url": "https://github.com/machine202502/ts-math/issues"
   },
   "homepage": "https://github.com/machine202502/ts-math#readme",
-  "description": "",
   "devDependencies": {
     "ts-node": "^10.9.2",
-    "tsc": "^2.0.4"
+    "typescript": "^5.9.3"
   }
 }

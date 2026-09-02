@@ -1,4 +1,4 @@
-import * as Math from "./math";
+import * as Math from "./example-module";
 
 const expected = {
   a: 153 as const,
